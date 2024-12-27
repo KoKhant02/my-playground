@@ -4,7 +4,7 @@ const { ethers } = require("ethers");
 const providerURL = "https://sepolia.infura.io/v3/67feff665bfb44ba8a238eb13314f81b";  // Example: https://sepolia.infura.io/v3/your_project_id
 
 // Replace with your ERC721 contract address
-const contractAddress = "0xD0BD2fd822192F195c6F13c7F0a3765EcB596E32";
+const contractAddress = "0x362b19ba5Ac86dAD33742779D9d270B905FAfaBF";
 
 // Replace with your ERC721 contract ABI
 const contractABI = [
@@ -12,7 +12,7 @@ const contractABI = [
 ];
 
 // Token ID you want to fetch the tokenURI for
-const tokenId = 0; // Example: 1, but you can replace it with any Token ID you need
+const tokenId = 16; // Example: 1, but you can replace it with any Token ID you need
 
 async function fetchTokenURI() {
   const provider = new ethers.JsonRpcProvider(providerURL);

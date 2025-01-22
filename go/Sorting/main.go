@@ -5,34 +5,22 @@ import (
 	"fmt"
 )
 
-func generateWorstCaseArray(n int) []int {
-	arr := make([]int, n)
-	for i := 0; i < n; i++ {
-		arr[i] = n - i - 1 // Reverse order array (worst-case for insertion sort)
-	}
-	return arr
-}
-
 func main() {
-	// seed := time.Now().UnixNano() // the random number generator
-	// rand.Seed(uint64(seed))
-	// arr := make([]int, 1000)
-	// for i := 0; i < 1000; i++ {
-	// 	arr[i] = rand.Intn(1000) // Generate random numbers between 0 and 1000
-	// }
 
-	// arr := []int{4, 2, 1, 3}
-	// 2147483647
-	n := 1000000000
-	arr := generateWorstCaseArray(n)
+	//INSERTION SORTING
+
+	arr := []int{4, 2, 1, 3}
 
 	head := algorithm.CreateLinkedList(arr)
-
-	fmt.Println("Original List:")
-	algorithm.PrintList(head)
-
 	sortedHead := algorithm.InsertionSortList(head)
 
-	fmt.Println("Sorted List:")
+	fmt.Println("\nInsertion Sort List:")
 	algorithm.PrintList(sortedHead)
+
+	//REVERSE SORTING
+	fmt.Println("\nReverse List:")
+	fmt.Println(algorithm.Reverse(123))
+	fmt.Println(algorithm.Reverse(-123))
+	fmt.Println(algorithm.Reverse(120))
+	fmt.Println(algorithm.Reverse(2147483647))
 }
